@@ -6,6 +6,15 @@ import { useEffect, useRef, useState } from 'react';
 import type { cityMarkersProps } from '../../types/types';
 import type { Arrow } from '../../types/types';
 
+// Fix Leaflet's default icon issue with Webpack/Vite builds
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: ('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: ('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: ('leaflet/dist/images/marker-shadow.png'),
+});
+
   const cityMarkers:cityMarkersProps[] = [
       { city: "Praha", coords: [ 50.080, 14.42143 ] },
       { city: "Brno", coords: [ 49.150876, 16.642643 ] },
