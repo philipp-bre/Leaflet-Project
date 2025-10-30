@@ -1,10 +1,10 @@
 
-import '../src/app.css';
+import '../App.css';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useEffect, useRef, useState } from 'react';
-import type { cityMarkersProps } from '../types/types';
-import type { Arrow } from '../types/types';
+import type { cityMarkersProps } from '../../types/types';
+import type { Arrow } from '../../types/types';
 
   const cityMarkers:cityMarkersProps[] = [
       { city: "Praha", coords: [ 50.080, 14.42143 ] },

@@ -1,4 +1,4 @@
-import  LeafletMap  from "../components/LeafletMap";
+import  LeafletMap  from "./components/LeafletMap";
 
 function LeafletProject() {
   return <LeafletMap/>;
